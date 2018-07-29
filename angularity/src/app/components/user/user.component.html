@@ -1,0 +1,40 @@
+<h1>Personal Particulars</h1>
+<h2>Hi {{ user.name }}</h2>
+<form name="form" (submit)="createUser()">
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" [(ngModel)]="user.name" name="name" required>
+  </div>
+  <br />
+  <div>
+    <label for="age">Age: </label>
+    <input type="number" [(ngModel)]="user.age" name="age" required>
+  </div>
+  <br />
+  <div>
+    <label for="email">Email: </label>
+    <input type="email" [(ngModel)]="user.email" name="email" required>
+  </div>
+  <br />
+  <div>
+    <label for="address">Address: </label>
+    <input type="text" [(ngModel)]="user.address" name="address" required>
+  </div>
+  <br />
+  <input type="submit">
+</form>
+
+<div *ngIf="users.length > 0">
+  <h1>All Users</h1>
+  <ol>
+    <li *ngFor="let user of users">
+      {{ user.name }}
+      <ul>
+        <li>Age: {{ user.age }}</li>
+        <li>Email: {{ user.email }}</li>
+        <li>Address: {{ user.address }}</li>
+      </ul>
+      <button (click)="deleteUser(user)">Delete</button>
+    </li>
+  </ol>
+</div>
