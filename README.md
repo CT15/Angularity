@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Angularity
 
 A simple project to familiarise myself with AngularJS.
@@ -16,3 +17,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   $ ng serve
   ```
 3. Open your browser on `http://localhost:4200/`
+=======
+>>>>>>> parent of 3ebe3fd... Update README.md
